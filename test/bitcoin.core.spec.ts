@@ -35,7 +35,7 @@ describe('Bitcoin-core', () => {
   });
 
   // base58KeysValid
-  describe('address.toBase58GrsCheck', () => {
+  describe('address.toBase58DCheck', () => {
     const typeMap: any = {
       pubkey: 'pubKeyHash',
       script: 'scriptHash',
@@ -55,7 +55,7 @@ describe('Bitcoin-core', () => {
 
       it('can export ' + expected, () => {
         assert.strictEqual(
-          bitcoin.address.toBase58GrsCheck(hash, version),
+          bitcoin.address.toBase58DCheck(hash, version),
           expected,
         );
       });
@@ -63,7 +63,7 @@ describe('Bitcoin-core', () => {
   });
 
   // base58KeysInvalid
-  describe('address.fromBase58GrsCheck', () => {
+  describe('address.fromBase58DCheck', () => {
     const allowedNetworks = [
       bitcoin.networks.bitcoin.pubKeyHash,
       bitcoin.networks.bitcoin.scriptHash,
@@ -76,7 +76,7 @@ describe('Bitcoin-core', () => {
 
       it('throws on ' + strng, () => {
         assert.throws(() => {
-          const address = bitcoin.address.fromBase58GrsCheck(strng);
+          const address = bitcoin.address.fromBase58DCheck(strng);
 
           assert.notStrictEqual(
             allowedNetworks.indexOf(address.version),

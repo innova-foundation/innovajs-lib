@@ -1,5 +1,5 @@
 const createHash = require('create-hash');
-const groestlhash = require('groestl-hash-js');
+const tribushash = require('tribus-hashjs');
 
 export function ripemd160(buffer: Buffer): Buffer {
   try {
@@ -33,6 +33,6 @@ export function hash256(buffer: Buffer): Buffer {
   return sha256(sha256(buffer));
 }
 
-export function groestl(buffer: Buffer): Buffer {
-  return new Buffer(groestlhash.groestl_2(buffer, 1, 1));
+export function tribus(buffer: Buffer): Buffer {
+  return new Buffer(tribushash.tribus(buffer, 1, 1));
 }

@@ -21,12 +21,12 @@ const NETWORKS = Object.assign(
 );
 
 describe('address', () => {
-  describe('fromBase58GrsCheck', () => {
+  describe('fromBase58DCheck', () => {
     fixtures.standard.forEach(f => {
       if (!f.base58check) return;
 
       it('decodes ' + f.base58check, () => {
-        const decode = baddress.fromBase58GrsCheck(f.base58check);
+        const decode = baddress.fromBase58DCheck(f.base58check);
 
         assert.strictEqual(decode.version, f.version);
         assert.strictEqual(decode.hash.toString('hex'), f.hash);
@@ -36,7 +36,7 @@ describe('address', () => {
     fixtures.invalid.frombase58check.forEach(f => {
       it('throws on ' + f.exception, () => {
         assert.throws(() => {
-          baddress.fromBase58GrsCheck(f.address);
+          baddress.fromBase58DCheck(f.address);
         }, new RegExp(f.address + ' ' + f.exception));
       });
     });
@@ -85,12 +85,12 @@ describe('address', () => {
     });
   });
 
-  describe('toBase58GrsCheck', () => {
+  describe('toBase58DCheck', () => {
     fixtures.standard.forEach(f => {
       if (!f.base58check) return;
 
       it('encodes ' + f.hash + ' (' + f.network + ')', () => {
-        const address = baddress.toBase58GrsCheck(
+        const address = baddress.toBase58DCheck(
           Buffer.from(f.hash, 'hex'),
           f.version,
         );

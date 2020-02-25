@@ -146,7 +146,7 @@ export class Block {
   }
 
   getHash(): Buffer {
-    return bcrypto.groestl(this.toBuffer(true));
+    return bcrypto.tribus(this.toBuffer(true));
   }
 
   getId(): string {

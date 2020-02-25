@@ -1,4 +1,4 @@
-import * as bip32 from 'bip32grs';
+import * as bip32 from 'bip32d';
 import * as address from './address';
 import * as crypto from './crypto';
 import * as ECPair from './ecpair';
@@ -14,7 +14,7 @@ export { OPS as opcodes } from './script';
 export { Transaction } from './transaction';
 export { TransactionBuilder } from './transaction_builder';
 
-export { BIP32Interface } from 'bip32grs';
+export { BIP32Interface } from 'bip32d';
 export { ECPairInterface, Signer, SignerAsync } from './ecpair';
 export { Network } from './networks';
 export {

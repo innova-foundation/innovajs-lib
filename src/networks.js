@@ -18,9 +18,9 @@ exports.regtest = {
     public: 0x043587cf,
     private: 0x04358394,
   },
-  pubKeyHash: 0x12,
-  scriptHash: 0x74,
-  wif: 0x8c,
+  pubKeyHash: 0x6f,
+  scriptHash: 0xc4,
+  wif: 0xef,
 };
 exports.testnet = {
   messagePrefix: '\x19Denarius Signed Message:\n',
@@ -29,7 +29,7 @@ exports.testnet = {
     public: 0x043587cf,
     private: 0x04358394,
   },
-  pubKeyHash: 0x12,
-  scriptHash: 0x74,
-  wif: 0x8c,
+  pubKeyHash: 0x6f,
+  scriptHash: 0xc4,
+  wif: 0xef,
 };
