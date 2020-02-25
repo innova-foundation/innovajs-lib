@@ -7,7 +7,7 @@ const types = require('./types');
 const bech32 = require('bech32');
 const bs58dcheck = require('bs58dcheck');
 const typeforce = require('typeforce');
-function fromBase58GrsCheck(address) {
+function fromBase58DCheck(address) {
   const payload = bs58dcheck.decode(address);
   // TODO: 4.0.0, move to "toOutputScript"
   if (payload.length < 21) throw new TypeError(address + ' is too short');
@@ -16,7 +16,7 @@ function fromBase58GrsCheck(address) {
   const hash = payload.slice(1);
   return { version, hash };
 }
-exports.fromBase58GrsCheck = fromBase58GrsCheck;
+exports.fromBase58DCheck = fromBase58DCheck;
 function fromBech32(address) {
   const result = bech32.decode(address);
   const data = bech32.fromWords(result.words.slice(1));
@@ -27,14 +27,14 @@ function fromBech32(address) {
   };
 }
 exports.fromBech32 = fromBech32;
-function toBase58GrsCheck(hash, version) {
+function toBase58DCheck(hash, version) {
   typeforce(types.tuple(types.Hash160bit, types.UInt8), arguments);
   const payload = Buffer.allocUnsafe(21);
   payload.writeUInt8(version, 0);
   hash.copy(payload, 1);
   return bs58dcheck.encode(payload);
 }
-exports.toBase58GrsCheck = toBase58GrsCheck;
+exports.toBase58DCheck = toBase58DCheck;
 function toBech32(data, version, prefix) {
   const words = bech32.toWords(data);
   words.unshift(version);
@@ -64,7 +64,7 @@ function toOutputScript(address, network) {
   let decodeBase58;
   let decodeBech32;
   try {
-    decodeBase58 = fromBase58GrsCheck(address);
+    decodeBase58 = fromBase58DCheck(address);
   } catch (e) {}
   if (decodeBase58) {
     if (decodeBase58.version === network.pubKeyHash)
