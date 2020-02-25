@@ -5,10 +5,10 @@ const payments = require('./payments');
 const bscript = require('./script');
 const types = require('./types');
 const bech32 = require('bech32');
-const bs58grscheck = require('bs58grscheck');
+const bs58dcheck = require('bs58dcheck');
 const typeforce = require('typeforce');
 function fromBase58GrsCheck(address) {
-  const payload = bs58grscheck.decode(address);
+  const payload = bs58dcheck.decode(address);
   // TODO: 4.0.0, move to "toOutputScript"
   if (payload.length < 21) throw new TypeError(address + ' is too short');
   if (payload.length > 21) throw new TypeError(address + ' is too long');
@@ -32,7 +32,7 @@ function toBase58GrsCheck(hash, version) {
   const payload = Buffer.allocUnsafe(21);
   payload.writeUInt8(version, 0);
   hash.copy(payload, 1);
-  return bs58grscheck.encode(payload);
+  return bs58dcheck.encode(payload);
 }
 exports.toBase58GrsCheck = toBase58GrsCheck;
 function toBech32(data, version, prefix) {
