@@ -54,7 +54,7 @@
     "bip32d": "https://github.com/carsenk/bip32d",
     "bip66": "^1.1.0",
     "bitcoin-ops": "^1.4.0",
-    "bs58dcheck": "https://github.com/carsenk/bs58dcheck",
+    "bs58dcheck": "https://github.com/bitcoinjs/bs58check",
     "create-hash": "^1.1.0",
     "create-hmac": "^1.1.3",
     "merkle-lib": "^2.0.10",
