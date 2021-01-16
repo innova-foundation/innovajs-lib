@@ -1,19 +1,19 @@
-# DenariusJS (Denariusjs-lib)
-A javascript Denarius library for node.js and browsers. Written in TypeScript, but committing the JS files to verify.
+# InnovaJS (Innovajs-lib)
+A javascript Innova library for node.js and browsers. Written in TypeScript, but committing the JS files to verify.
 
 Released under the terms of the [MIT LICENSE](LICENSE).
 
 ## Should I use this in production?
 If you are thinking of using the *master* branch of this library in production, **stop**.
-Master is not stable; it is our development branch, and [only tagged releases may be classified as stable](https://github.com/carsenk/denariusjs-lib/tags).
+Master is not stable; it is our development branch, and [only tagged releases may be classified as stable](https://github.com/innova-foundation/innovajs-lib/tags).
 
 
 ## Can I trust this code?
 > Don't trust. Verify.
 
-We recommend every user of this library and the [denariusjs](https://github.com/carsenk/denariusjs-lib) ecosystem audit and verify any underlying code for its validity and suitability,  including reviewing any and all of your project's dependencies.
+We recommend every user of this library and the [innovajs](https://github.com/innova-foundation/innovajs-lib) ecosystem audit and verify any underlying code for its validity and suitability,  including reviewing any and all of your project's dependencies.
 
-Mistakes and bugs happen, but with your help in resolving and reporting [issues](https://github.com/carsenk/denariusjs-lib/issues), together we can produce open source software that is:
+Mistakes and bugs happen, but with your help in resolving and reporting [issues](https://github.com/innova-foundation/innovajs-lib/issues), together we can produce open source software that is:
 
 - Easy to audit and verify,
 - Tested, with test coverage >95%,
@@ -23,11 +23,11 @@ Mistakes and bugs happen, but with your help in resolving and reporting [issues]
 
 
 ## Documentation
-Presently,  we do not have any formal documentation other than our [examples](#examples), please [ask for help](https://github.com/carsenk/denariusjs-lib/issues/new) if our examples aren't enough to guide you.
+Presently,  we do not have any formal documentation other than our [examples](#examples), please [ask for help](https://github.com/innova-foundation/innovajs-lib/issues/new) if our examples aren't enough to guide you.
 
 ## Installation
 ``` bash
-npm install denariusjs-lib
+npm install innovajs-lib
 ```
 
 Typically we support the [Node Maintenance LTS version](https://github.com/nodejs/Release).
@@ -63,7 +63,7 @@ We are not an authorative source of best practice, but, at the very least:
 
 
 ### Browser
-The recommended method of using `denariusjs-lib` in your browser is through [Browserify](https://github.com/substack/node-browserify).
+The recommended method of using `innovajs-lib` in your browser is through [Browserify](https://github.com/substack/node-browserify).
 If you're familiar with how to use browserify, ignore this and carry on, otherwise, it is recommended to read the tutorial at https://browserify.org/.
 
 **NOTE**: We use Node Maintenance LTS features, if you need strict ES5, use [`--transform babelify`](https://github.com/babel/babelify) in conjunction with your `browserify` step (using an [`es2015`](https://babeljs.io/docs/plugins/preset-es2015/) preset).
@@ -137,7 +137,7 @@ npm run-script coverage
 - [BIP68](https://github.com/bitcoinjs/bip68) - Relative lock-time encoding library
 - [BIP69](https://github.com/bitcoinjs/bip69) - Lexicographical Indexing of Transaction Inputs and Outputs
 - [Base58](https://github.com/cryptocoinjs/bs58) - Base58 encoding/decoding
-- [Base58 D Check](https://github.com/carsenk/bs58dcheck) - Base58 check encoding/decoding
+- [Base58 INN Check](https://github.com/innova-foundation/bs58icheck) - Base58 check encoding/decoding
 - [Bech32](https://github.com/bitcoinjs/bech32) - A BIP173 compliant Bech32 encoding library
 - [coinselect](https://github.com/bitcoinjs/coinselect) - A fee-optimizing, transaction input selection module for bitcoinjs-lib.
 - [merkle-lib](https://github.com/bitcoinjs/merkle-lib) - A performance conscious library for merkle root and tree calculations.
@@ -145,7 +145,7 @@ npm run-script coverage
 
 
 ## Alternatives
-- [Denarius](https://github.com/carsenk/denarius)
+- [Innova](https://github.com/innova-foundation/innova)
 
 
 ## LICENSE [MIT](LICENSE)

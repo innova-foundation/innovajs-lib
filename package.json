@@ -1,18 +1,18 @@
 {
-  "name": "denariusjs-lib",
+  "name": "innovajs-lib",
   "version": "5.1.7",
-  "description": "Client-side Denarius JavaScript library",
+  "description": "Client-side Innova JavaScript library",
   "main": "./src/index.js",
   "types": "./types/index.d.ts",
   "engines": {
     "node": ">=8.0.0"
   },
   "keywords": [
-    "denariusjs",
-    "denarius",
+    "innovajs",
+    "innova",
     "browserify",
     "javascript",
-    "denariusjs"
+    "innovajs"
   ],
   "scripts": {
     "build": "npm run clean && tsc -p ./tsconfig.json && npm run formatjs",
@@ -42,7 +42,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/carsenk/denariusjs-lib.git"
+    "url": "https://github.com/innova-foundation/innovajs-lib.git"
   },
   "files": [
     "src",
@@ -51,10 +51,10 @@
   "dependencies": {
     "bech32": "^1.1.2",
     "bip174": "^1.0.1",
-    "bip32d": "https://github.com/carsenk/bip32d",
+    "bip32i": "https://github.com/innova-foundation/bip32i",
     "bip66": "^1.1.0",
     "bitcoin-ops": "^1.4.0",
-    "bs58dcheck": "https://github.com/bitcoinjs/bs58check",
+    "bs58icheck": "https://github.com/bitcoinjs/bs58check",
     "create-hash": "^1.1.0",
     "create-hmac": "^1.1.3",
     "merkle-lib": "^2.0.10",
@@ -64,7 +64,7 @@
     "typeforce": "^1.11.3",
     "varuint-bitcoin": "^1.0.4",
     "tribus-hashjs": "^1.0.2",
-    "wifd": "https://github.com/carsenk/wifd"
+    "wifd": "https://github.com/innova-foundation/wifd"
   },
   "devDependencies": {
     "@types/bs58": "^4.0.0",

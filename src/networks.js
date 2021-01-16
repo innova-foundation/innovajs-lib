@@ -1,7 +1,7 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 exports.bitcoin = {
-  messagePrefix: '\x19Denarius Signed Message:\n',
+  messagePrefix: '\x19Innova Signed Message:\n',
   bech32: 'd',
   bip32: {
     public: 0x0488b21e,
@@ -12,7 +12,7 @@ exports.bitcoin = {
   wif: 0x9e,
 };
 exports.regtest = {
-  messagePrefix: '\x19Denarius Signed Message:\n',
+  messagePrefix: '\x19Innova Signed Message:\n',
   bech32: 'dt',
   bip32: {
     public: 0x043587cf,
@@ -23,7 +23,7 @@ exports.regtest = {
   wif: 0xef,
 };
 exports.testnet = {
-  messagePrefix: '\x19Denarius Signed Message:\n',
+  messagePrefix: '\x19Innova Signed Message:\n',
   bech32: 'td',
   bip32: {
     public: 0x043587cf,

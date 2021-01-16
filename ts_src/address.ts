@@ -5,7 +5,7 @@ import * as bscript from './script';
 import * as types from './types';
 
 const bech32 = require('bech32');
-const bs58dcheck = require('bs58dcheck');
+const bs58icheck = require('bs58icheck');
 const typeforce = require('typeforce');
 
 export interface Base58DCheckResult {
@@ -20,7 +20,7 @@ export interface Bech32Result {
 }
 
 export function fromBase58DCheck(address: string): Base58DCheckResult {
-  const payload = bs58dcheck.decode(address);
+  const payload = bs58icheck.decode(address);
 
   // TODO: 4.0.0, move to "toOutputScript"
   if (payload.length < 21) throw new TypeError(address + ' is too short');
@@ -50,7 +50,7 @@ export function toBase58DCheck(hash: Buffer, version: number): string {
   payload.writeUInt8(version, 0);
   hash.copy(payload, 1);
 
-  return bs58dcheck.encode(payload);
+  return bs58icheck.encode(payload);
 }
 
 export function toBech32(

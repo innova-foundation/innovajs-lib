@@ -15,7 +15,7 @@ interface Bip32 {
 }
 
 export const bitcoin: Network = {
-  messagePrefix: '\x19Denarius Signed Message:\n',
+  messagePrefix: '\x19Innova Signed Message:\n',
   bech32: 'd',
   bip32: {
     public: 0x0488b21e,
@@ -26,7 +26,7 @@ export const bitcoin: Network = {
   wif: 0x9e,
 };
 export const regtest: Network = {
-  messagePrefix: '\x19Denarius Signed Message:\n',
+  messagePrefix: '\x19Innova Signed Message:\n',
   bech32: 'dt',
   bip32: {
     public: 0x043587cf,
@@ -37,7 +37,7 @@ export const regtest: Network = {
   wif: 0xef,
 };
 export const testnet: Network = {
-  messagePrefix: '\x19Denarius Signed Message:\n',
+  messagePrefix: '\x19Innova Signed Message:\n',
   bech32: 'td',
   bip32: {
     public: 0x043587cf,

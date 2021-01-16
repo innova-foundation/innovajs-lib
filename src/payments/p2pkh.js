@@ -7,7 +7,7 @@ const lazy = require('./lazy');
 const typef = require('typeforce');
 const OPS = bscript.OPS;
 const ecc = require('tiny-secp256k1');
-const bs58dcheck = require('bs58dcheck');
+const bs58icheck = require('bs58icheck');
 // input: {signature} {pubkey}
 // output: OP_DUP OP_HASH160 {hash160(pubkey)} OP_EQUALVERIFY OP_CHECKSIG
 function p2pkh(a, opts) {
@@ -27,7 +27,7 @@ function p2pkh(a, opts) {
     a,
   );
   const _address = lazy.value(() => {
-    const payload = bs58dcheck.decode(a.address);
+    const payload = bs58icheck.decode(a.address);
     const version = payload.readUInt8(0);
     const hash = payload.slice(1);
     return { version, hash };
@@ -42,7 +42,7 @@ function p2pkh(a, opts) {
     const payload = Buffer.allocUnsafe(21);
     payload.writeUInt8(network.pubKeyHash, 0);
     o.hash.copy(payload, 1);
-    return bs58dcheck.encode(payload);
+    return bs58icheck.encode(payload);
   });
   lazy.prop(o, 'hash', () => {
     if (a.output) return a.output.slice(3, 23);
