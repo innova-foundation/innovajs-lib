@@ -5,7 +5,7 @@ const types = require('./types');
 const ecc = require('tiny-secp256k1');
 const randomBytes = require('randombytes');
 const typeforce = require('typeforce');
-const wif = require('wifd');
+const wif = require('wifi');
 const isOptions = typeforce.maybe(
   typeforce.compile({
     compressed: types.maybe(types.Boolean),

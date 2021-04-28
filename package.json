@@ -64,7 +64,7 @@
     "typeforce": "^1.11.3",
     "varuint-bitcoin": "^1.0.4",
     "tribus-hashjs": "^1.0.2",
-    "wifd": "https://github.com/innova-foundation/wifd"
+    "wifi": "https://github.com/innova-foundation/wifi"
   },
   "devDependencies": {
     "@types/bs58": "^4.0.0",
